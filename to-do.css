@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background: #162029;
+    height:100vh;
+    color:#fff;
+    display:flex;    
+    justify-content: center;
+    align-items: center;
+}
+.todo-body{
+    background: #333e4a;
+    width:350px;
+    height:400px;
+    border-radius:10px;
+}
+.todo-body h2{
+    font-weight: 500;
+    font-size:25px;
+    letter-spacing: 2px;
+    margin:15px 0 8px 10px;
+}
+.todo-body ul{
+    list-style-type: none;
+}
+.todo-body hr{
+    border:0.2px solid #29292aac;
+    /* margin-top:15px; */
+   
+}
+
+.todo-body p{
+display:inline;
+}
+.todo-body span{
+display:block;
+margin-left:58px;
+font-size:10px;
+color: #ffffff61;
+}
+.check{
+    /* margin:25px 4px 5px 25px; */
+    width:20px;
+    cursor: pointer;
+    color: #ffffff61;
+}
+.todo-body li{
+    cursor: pointer;
+    margin:10px;
+}
+.todo-body i{
+    margin-right:10px;
+}
+.checked{
+    text-decoration: line-through;
+}
+
+.new-task button{
+    height:25px;
+    width:60px;
+    background-color: #fff !important;
+    border-radius: 5px;
+    outline: 0;
+    border:0;
+    cursor: pointer;
+    margin-left:5px;
+}
+.new-task input{
+    height:25px;
+   width:200px;
+    border-radius: 3px;
+    outline: 0;
+    border:0;
+}
+
+.extra{
+display:flex;
+justify-content: center;
+align-items: center;
+}    
