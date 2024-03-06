@@ -10,18 +10,19 @@
 </head>
 <body>
 <section class="todo-body">
-<h2>Todos</h2><hr>
-
-<ul>
-    <li><i class="fa-regular fa-circle fa-xl check"></i>
+<div class="heading"><h2>Todos</h2>
+<i class="fa-regular fa-moon fa-xl dark-mode"></i></div>
+<hr>
+<ul class="list">
+    <!-- <li><i class="fa-regular fa-circle fa-xl check"></i>
    <p>Talk to Grandpa Rick</p> 
     <span>Due in 3 mins</span>
-    </li><hr>
-    <li class="new-task extra">
-     <i class="fa-solid fa-plus fa-xl check add" style="color: #ffffff61;"></i>
-    <p>New Task</p>
+    </li><hr> -->
+    <li class="new-task">
+     <i class="fa-solid fa-plus fa-xl" onclick="initializeTask()"></i>
+    <p>New Task</p><hr>
 </li>
-   <hr>
+  
 </ul>
 </section>
 <script src="to-do.js"></script>   
