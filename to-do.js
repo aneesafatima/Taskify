@@ -6,32 +6,26 @@ const newTask = document.querySelector(".new-task");
 const icon = container.querySelectorAll("i");
 let clickCount = 0;
 let bodyBackgroundColor = window.getComputedStyle(document.body).backgroundColor;
-console.log(icon)
+
 
 
 const initializeTask = () =>{
 clickCount++;
-newTask.innerHTML = `<input type="text" class="task-info" placeholder="   enter your task"><button class="submit" type="submit">Enter</button><hr>`
+newTask.innerHTML = `<input type="text" class="task-info" placeholder="   enter your task"><button class="submit" type="submit">Enter</button>`
 const submitBtn = document.querySelector(".submit");
 
 submitBtn.addEventListener("click", ()=>{
 const taskInfo = document.querySelector(".task-info");
 const element = document.createElement("li");
-element.innerHTML = `<li><i class="fa-regular fa-circle fa-xl check"></i>
+element.innerHTML = `<li class="list-item"><div><i class="fa-regular fa-circle fa-xl check"></i>
 <p class="content">${taskInfo.value}</p> 
- <span class="due-text">Due in 3 mins</span><hr>
- </li>`;
+ <span class="due-text">Due in 3 mins</span></div><i class="fa-solid fa-xmark cross" onclick="deleteItem(event)"></i>
+ </li><hr>`;
 list.appendChild(element);
-newTask.innerHTML = '<i class="fa-solid fa-plus fa-xl" onclick="initializeTask()"></i><p>New Task</p><hr>';
-const dueTime = document.querySelectorAll(".due-text");
-dueTime.forEach((elem)=>{
-elem.style.color = (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
-})
-
+newTask.innerHTML = '<i class="fa-solid fa-plus fa-xl" onclick="initializeTask()"></i><p>New Task</p>';
+setDueColor(document.querySelectorAll(".due-text"));
 })
 }
-
-
 
 
 list.addEventListener("click", (event) =>{
@@ -42,40 +36,37 @@ list.addEventListener("click", (event) =>{
       check.className = check.classList.contains("fa-circle") ? "fa-regular fa-circle-check fa-xl check" : "fa-regular fa-circle fa-xl check";
       content.classList.toggle("checked");
       const parent = check.parentNode;
+      const hrParent = parent.parentNode;
+      const hrElement = hrParent.querySelector(".cross");
+      const hrLine = hrParent.nextElementSibling;
+      console.log(hrElement)
       setTimeout(()=>{
-         parent.innerHTML = "";
-      },300)
+         parent.remove();
+         hrElement.remove();
+         hrLine.remove();
+      },100)
    }
-
-   
 })
 
 
 
 const mode = document.querySelector(".dark-mode");
 mode.addEventListener("click", () =>{
-
-
 mode.className = mode.classList.contains("fa-moon") ? "fa-regular fa-sun fa-xl dark-mode" : "fa-regular fa-moon fa-xl dark-mode";
 (bodyBackgroundColor === "rgb(255, 255, 255)") ? darkMode() : whiteMode();
 })
  
+
 const darkMode = () =>{
    console.log("Dark mode");
    bodyBackgroundColor = "#162029"
    body.style.backgroundColor = bodyBackgroundColor;
-   console.log(bodyBackgroundColor);
    document.body.style.color = "#fff";
    container.style.backgroundColor ="#333e4a";
    icon.forEach((elem)=> elem.style.color = "#ffffff61");
    if(clickCount>=1)
-   {
-   const dueTime = document.querySelectorAll(".due-text");
-   dueTime.forEach((elem)=>{
-   elem.style.color = (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
-   })
-   
-}}
+   setDueColor(document.querySelectorAll(".due-text"));
+}
 
 const whiteMode = () =>{
    console.log("White mode");
@@ -85,12 +76,26 @@ const whiteMode = () =>{
    container.style.backgroundColor ="#f2f2f2";
    icon.forEach((elem)=> elem.style.color = "#000");
    if(clickCount>=1)
-   {
-   const dueTime = document.querySelectorAll(".due-text");
-   dueTime.forEach((elem)=>{
-   elem.style.color = (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
-   })
-   
-}
+   setDueColor(document.querySelectorAll(".due-text"));
+
 }
 
+const setDueColor = (dueTime) =>{
+   dueTime.forEach((elem)=>{
+      elem.style.color = (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
+      // icon.style.color = (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
+      icon.forEach((element)=>{
+      element.style.color =  (bodyBackgroundColor === "#162029" ? "#ffffff61" : "#000" );
+      })
+      })
+}
+
+const deleteItem = (event) =>{
+  
+   const del = event.target.closest(".cross");
+   console.log(del);
+   const parent = del.parentNode;
+   const hrElement = parent.nextElementSibling;
+   parent.remove();
+   hrElement.remove();
+}
