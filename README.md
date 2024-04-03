@@ -25,9 +25,9 @@
 To run the project locally, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the required dependencies by running `npm install` or `yarn` in the project directory.
-3. Start the application by running `npm start` or `yarn start`.
-4. Open your web browser and navigate to [http://localhost:PORT](http://localhost:PORT) (replace `PORT` with the port number specified in your console).
+2. Ensure you have live server installed in your development environment. If not, you can install it using your preferred method.
+3. Start the application by opening the project directory in your code editor and then using live server to serve the files.
+4. Once the application is running, open your web browser and navigate to [http://localhost:PORT](http://localhost:PORT), replacing `PORT` with the port number used by live server.
 
 ## Bug
 
