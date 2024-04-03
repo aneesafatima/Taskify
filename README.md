@@ -1,4 +1,4 @@
-# To-Do List Web Application
+# Taskify
 
 📝 This is a simple To-Do List web application that allows users to manage their tasks efficiently. It features an intuitive interface with the ability to add, check off, and delete tasks. Additionally, it includes a dark mode feature for improved usability in low-light environments.
 
