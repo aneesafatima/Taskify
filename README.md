@@ -45,4 +45,4 @@ To run the project locally, follow these steps:
 
 ---
 
-Feel free to explore the codebase, suggest improvements, or contribute to make this To-Do List application even better! 🚀
+Feel free to explore the codebase, suggest improvements, or contribute to make this Taskify application even better! 🚀
