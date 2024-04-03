@@ -13,9 +13,6 @@
 - 🌙 **Enhanced Visibility**: Dark mode provides a more comfortable viewing experience in low-light conditions.
 - ☀️ **Toggle Functionality**: Users can switch between light and dark modes by clicking on the moon or sun icon.
 
-### Responsive Design
-- 📱 **Mobile-Friendly**: The application is responsive and adapts well to various screen sizes, providing a consistent user experience across devices.
-
 ## Contributing
 
 🤝 Contributions to this project are welcome! If you have any ideas for new features or improvements, feel free to open an issue or submit a pull request. Here are some potential enhancements that could be implemented:
