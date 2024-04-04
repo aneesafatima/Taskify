@@ -47,8 +47,6 @@ To run the project locally, follow these steps:
 
 Feel free to explore the codebase, suggest improvements, or contribute to make this Taskify application even better! 🚀
 
----
-
 ## 🎥 Video
 
 https://github.com/aneesa04/Taskify/assets/161751452/ad01a09e-b795-4cc6-89f7-2e2410ce0af4
