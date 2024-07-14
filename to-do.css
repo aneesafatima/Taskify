@@ -113,3 +113,11 @@ margin-left:50%;
 cursor: pointer;
 margin-right:18px !important;
 }
+
+a{  font-size: 10px;
+    color: #a7a7a7;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%);
+}
